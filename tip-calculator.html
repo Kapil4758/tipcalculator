@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <section class="food-tip-section">
+        <div class="food-tip-select">
+            <div class="food-tip-content">
+                <div class="food-tip-title">
+                    <h2>Tip Calculator</h2>
+                </div>
+                <h4>Select Food</h4>
+                <select id="foodName">
+                    <option value="">--- Select Food ---</option>
+                    <option value="240">Burger</option>
+                    <option value="750">Pizza</option>
+                    <option value="180">Sandwich</option>
+                    <option value="50">Dabeli</option>
+                    <option value="25">Aloopuri</option>
+                </select>
+        
+                <h4>Enter Food Quantity</h4>
+                <input type="number" min="0" id="foodNumber">
+        
+                <h4>Select Food Discount</h4>
+                <select id="foodDiscount">
+                    <option value="">--- Select Discount ---</option>
+                    <option value="5">5%</option>
+                    <option value="10">10%</option>
+                    <option value="15">15%</option>
+                    <option value="20">20%</option>
+                    <option value="25">25%</option>
+                </select>
+
+                <input type="button" value="Generate Bill" id="generateBill" onclick="return getbill()">
+            </div>
+        </div>
+        <div class="food-tip" id="foodTip">
+            <div class="food-tip-bill">
+                <h1 class="food-tip-bill-title">Food Tip Bill</h1>
+                <h2>Food Name : <span id="showFname"></span></h2>
+                <h2>Food Price : <span id="showPrice"></span></h2>
+                <h2>Food Quantity : <span id="showQuantity"></span></h2>
+                <h2>Food Discount : <span id="showDiscount"></span></h2>
+                <h2>Food Total Amount : <span id="showFoodamt"></span></h2>
+            </div>
+        </div>        
+    </section>
+
+    
+    <script src="js/jquery.min.js"></script>
+    <script src="js/custom.js"></script>
+    
+</body>
+</html>
